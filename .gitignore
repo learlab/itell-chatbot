@@ -1,0 +1,7 @@
+**/*.ipynb_checkpoints/
+.env
+data
+bin
+results
+src/__*
+venv
