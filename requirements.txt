@@ -2,3 +2,4 @@ nemoguardrails
 protobuf==3.20.*
 accelerate
 bitsandbytes
+faiss-gpu

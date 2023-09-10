@@ -1,7 +1,9 @@
-**/*.ipynb_checkpoints/
+.ipynb_checkpoints
 .env
 data
 bin
 results
-src/__*
+**/__*
 venv
+kb
+vector-store
