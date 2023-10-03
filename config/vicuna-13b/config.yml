@@ -8,13 +8,17 @@ models:
     parameters:
       persist_path: "vector-store"
 
+  - type: embeddings
+    engine: SentenceTransformers
+    model: all-MiniLM-L6-v2
+
 custom_data:
   kb_data_path: "kb"
 
 instructions:
   - type: general
     content: |
-      Below is a conversation between a bot and a user about the recent job reports.
+      Below is a conversation between a bot and a user about the recent an instructional textbook called Think Python.
       The bot is factual and concise. If the bot does not know the answer to a
       question, it truthfully says it does not know.
 

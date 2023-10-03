@@ -21,8 +21,6 @@ from nemoguardrails.actions.actions import ActionResult
 from nemoguardrails.llm.helpers import get_llm_instance_wrapper
 from nemoguardrails.llm.providers import register_llm_provider
 
-
-
 def get_model_config(config: RailsConfig, type: str):
     """Quick helper to return the config for a specific model type."""
     for model_config in config.models:
@@ -32,16 +30,16 @@ def get_model_config(config: RailsConfig, type: str):
 
 @lru_cache
 def get_vicuna():
-    """Loads the Vicuna 13B LLM."""
-    repo_id = "lmsys/vicuna-13b-v1.5"
+    """Loads the Vicuna 7B LLM."""
+    repo_id = "lmsys/vicuna-7b-v1.5"
     # repo_id = "TheBloke/vicuna-13B-v1.5-GGUF"
 
-    model_params_gguf = {
-        "model_file": "vicuna-13b-v1.5.Q4_K_M.gguf",
-        "model_type": "llama",
-        "gpu_layers": 50,
-        "hf": True,
-    }
+    # model_params_gguf = {
+    #     "model_file": "vicuna-13b-v1.5.Q4_K_M.gguf",
+    #     "model_type": "llama",
+    #     "gpu_layers": 50,
+    #     "hf": True,
+    # }
 
     model_params = {
         "device_map": "auto",
@@ -183,7 +181,6 @@ def init_main_llm():
 
 
 def init(llm_rails: LLMRails):
-    print(os.getcwd())
     config = llm_rails.config
 
     # Initialize the models
