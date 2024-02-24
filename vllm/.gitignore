@@ -1,0 +1,9 @@
+.ipynb_checkpoints
+.env
+data
+bin
+results
+**/__*
+venv
+kb
+vector-store
